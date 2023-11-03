@@ -19,4 +19,5 @@ add_executable(pizza
                 src/main.cpp
                 src/pizza.cpp 
                 src/pizza.hpp
+                src/blat.hpp
             )

@@ -1,9 +1,13 @@
 #ifndef PIZZA_HPP
 #define PIZZA_HPP
 
+#include "blat.hpp"
+
+using namespace blat;
+
 namespace pizza{
     
-    class Pizza{
+    class Pizza : public Blat{
         private:
             int nr_felii;
             char* nume;   
@@ -12,6 +16,7 @@ namespace pizza{
             Pizza(int nr_felii, const char* nume);
             ~Pizza();        
             Pizza(const Pizza &pizza);
+            Pizza(Pizza &&pizza);
             // Getters
             int getNrFelii();
             const char* getNume();
@@ -19,6 +24,7 @@ namespace pizza{
             void setNrFelii(int val);
             // Others
             Pizza& operator=(Pizza const &obj);
+            void tipBlat() override;
     };
 }
 

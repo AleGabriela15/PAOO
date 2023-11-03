@@ -9,15 +9,16 @@ using namespace pizza;
 int main()
 {
     int option;
-
     const char* pizzaName = "Margerita";
     Pizza* margerita = new Pizza(4, pizzaName);
     pizzaName = "Prosciuto";
     Pizza* prosciuto = new Pizza(4, pizzaName);
     pizzaName = "Con Carne";
     Pizza* concarne = new Pizza(10, pizzaName);
-    Pizza* pizza = margerita;
-    concarne = prosciuto;
+
+    Pizza* pizza = margerita; // Copy-Constructor
+    concarne = prosciuto; // Assigment
+    Pizza* movePizza = std::move(concarne); // Move Constructor
     cout<<"\n\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n";
 
     do{
@@ -48,7 +49,8 @@ int main()
             break;
 
         case 2:
-            /* code */
+            margerita->tipBlat();
+            cout<<"\nPizza dupa apelarea move contructor se numeste: "<< movePizza->getNume()<<" si are: "<< movePizza->getNrFelii()<<" felii.";
             break;
         
         default:
