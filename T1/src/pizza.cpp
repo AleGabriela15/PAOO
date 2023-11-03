@@ -1,75 +1,50 @@
 #include <iostream>
-#include <string>
+#include <cstring>
 
 #include "pizza.hpp"
 
 using namespace std;
 
-class Pizza{
-    private:
-        int nr_felii;
-        string nume;
-    
-    public:
-        Pizza(int nr_felii, const string& nume){
-            cout<<"\nConstructor apelat.";
-            this->nr_felii = nr_felii;
-            this->nume = nume;
-        }
+namespace pizza{
+    Pizza::Pizza(int nr_felii, const char* name){
+        cout<<"\nConstructor apelat.";
+        this->nr_felii = nr_felii;
+        nume = new char[strlen(name) + 1];
+        strcpy(nume, name);
+    }
 
-        ~Pizza(){
-            cout<<"\nDestructor apelat.";
-        }
-        
-        Pizza(Pizza &pizza){
-            nr_felii = pizza.nr_felii;
-            nume = pizza.nume;
-            cout<<"\nCopy-constructor apelat.";
-        }
+    Pizza::~Pizza(){
+        delete[] nume;
+        cout<<"\nDestructor apelat.";
+    }
 
-        int getNrFelii(){
-            return nr_felii;
-        }
+    Pizza::Pizza(const Pizza &pizza){
+        nr_felii = pizza.nr_felii;
+        nume = pizza.nume;
+        cout<<"\nCopy-constructor apelat.";
+    }
 
-        string getNume(){
-            return nume;
-        }
+    int Pizza::getNrFelii(){
+        return nr_felii;
+    }
 
-        void setNrFelii(int val){
-            nr_felii = val;
-            cout<<"\nIncapsulare setter.";
-        }
+    const char* Pizza::getNume(){
+        return nume;
+    }
 
-        Pizza operator=(Pizza const &obj){
-           if( this == &obj){
+    void Pizza::setNrFelii(int val){
+        nr_felii = val;
+        cout<<"\nIncapsulare setter.";
+    }
+
+    Pizza& Pizza::operator=(Pizza const &obj){
+        cout<<"\nAssigment apelat.";
+        if( this == &obj){
             return *this;
-           }
-           nr_felii = obj.nr_felii;
-           nume = obj.nume;
-
-           return *this;
         }
-};
+        nr_felii = obj.nr_felii;
+        nume = obj.nume;
 
-int main()
-{
-    Pizza margerita(4, "Margerita");
-    Pizza prosciuto(4, "Prosciuto");
-    Pizza concarne(10, "Con Carne");
-    Pizza pizza = margerita;
-    concarne = prosciuto;
-
-
-    cout<<"\nPrima pizza se numeste: "<< margerita.getNume()<<" si are: "<< margerita.getNrFelii()<<" felii.";
-    cout<<"\nA doua pizza se numeste: "<< prosciuto.getNume()<<" si are: "<< prosciuto.getNrFelii()<<" felii.";
-    cout<<"\nA treia pizza se numeste: "<< pizza.getNume()<<" si are: "<< pizza.getNrFelii()<<" felii.";
-    cout<<"\nA patra se numeste: "<< concarne.getNume()<<" si are: "<< concarne.getNrFelii()<<" felii.";
-
-    margerita.setNrFelii(5);
-    cout<<"\nPrima pizza se numeste: "<< margerita.getNume()<<" si acum are: "<< margerita.getNrFelii()<<" felii.";
-    
-    cout<<"\nPizza dupa overloading se numeste: "<< concarne.getNume()<<" si are: "<< concarne.getNrFelii()<<" felii.";
-
-
-    return 0;
+        return *this;
+    }
 }

@@ -16,6 +16,7 @@ endif()
 
 #Define the executable
 add_executable(pizza 
+                src/main.cpp
                 src/pizza.cpp 
                 src/pizza.hpp
             )
