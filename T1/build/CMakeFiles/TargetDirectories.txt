@@ -1,3 +1,10 @@
-/home/ale/T1/build/CMakeFiles/pizza.dir
-/home/ale/T1/build/CMakeFiles/edit_cache.dir
-/home/ale/T1/build/CMakeFiles/rebuild_cache.dir
+/home/ale/PAOO/T1/build/CMakeFiles/edit_cache.dir
+/home/ale/PAOO/T1/build/CMakeFiles/rebuild_cache.dir
+/home/ale/PAOO/T1/build/src/CMakeFiles/pizza_src.dir
+/home/ale/PAOO/T1/build/src/CMakeFiles/edit_cache.dir
+/home/ale/PAOO/T1/build/src/CMakeFiles/rebuild_cache.dir
+/home/ale/PAOO/T1/build/main/CMakeFiles/pizza_main.dir
+/home/ale/PAOO/T1/build/main/CMakeFiles/edit_cache.dir
+/home/ale/PAOO/T1/build/main/CMakeFiles/rebuild_cache.dir
+/home/ale/PAOO/T1/build/headers/CMakeFiles/edit_cache.dir
+/home/ale/PAOO/T1/build/headers/CMakeFiles/rebuild_cache.dir

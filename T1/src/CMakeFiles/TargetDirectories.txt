@@ -1,3 +1,0 @@
-/home/ale/PAOO/T1/src/CMakeFiles/pizza.dir
-/home/ale/PAOO/T1/src/CMakeFiles/edit_cache.dir
-/home/ale/PAOO/T1/src/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++ -rdynamic CMakeFiles/pizza.dir/src/pizza.cpp.o -o pizza 

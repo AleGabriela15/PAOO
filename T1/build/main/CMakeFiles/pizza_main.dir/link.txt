@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpizza_main.a CMakeFiles/pizza_main.dir/main.cpp.o
+/usr/bin/ranlib libpizza_main.a

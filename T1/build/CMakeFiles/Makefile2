@@ -54,51 +54,128 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ale/T1
+CMAKE_SOURCE_DIR = /home/ale/PAOO/T1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ale/T1/build
+CMAKE_BINARY_DIR = /home/ale/PAOO/T1/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/pizza.dir/all
+all: src/all
+all: main/all
+all: headers/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: src/preinstall
+preinstall: main/preinstall
+preinstall: headers/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/pizza.dir/clean
+clean: src/clean
+clean: main/clean
+clean: headers/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pizza.dir
+# Directory level rules for directory headers
+
+# Recursive "all" directory target.
+headers/all:
+.PHONY : headers/all
+
+# Recursive "preinstall" directory target.
+headers/preinstall:
+.PHONY : headers/preinstall
+
+# Recursive "clean" directory target.
+headers/clean:
+.PHONY : headers/clean
+
+#=============================================================================
+# Directory level rules for directory main
+
+# Recursive "all" directory target.
+main/all: main/CMakeFiles/pizza_main.dir/all
+.PHONY : main/all
+
+# Recursive "preinstall" directory target.
+main/preinstall:
+.PHONY : main/preinstall
+
+# Recursive "clean" directory target.
+main/clean: main/CMakeFiles/pizza_main.dir/clean
+.PHONY : main/clean
+
+#=============================================================================
+# Directory level rules for directory src
+
+# Recursive "all" directory target.
+src/all: src/CMakeFiles/pizza_src.dir/all
+.PHONY : src/all
+
+# Recursive "preinstall" directory target.
+src/preinstall:
+.PHONY : src/preinstall
+
+# Recursive "clean" directory target.
+src/clean: src/CMakeFiles/pizza_src.dir/clean
+.PHONY : src/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/pizza_src.dir
 
 # All Build rule for target.
-CMakeFiles/pizza.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pizza.dir/build.make CMakeFiles/pizza.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pizza.dir/build.make CMakeFiles/pizza.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ale/T1/build/CMakeFiles --progress-num=1,2 "Built target pizza"
-.PHONY : CMakeFiles/pizza.dir/all
+src/CMakeFiles/pizza_src.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=3,4 "Built target pizza_src"
+.PHONY : src/CMakeFiles/pizza_src.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pizza.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/T1/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pizza.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/T1/build/CMakeFiles 0
-.PHONY : CMakeFiles/pizza.dir/rule
+src/CMakeFiles/pizza_src.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/pizza_src.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/pizza_src.dir/rule
 
 # Convenience name for target.
-pizza: CMakeFiles/pizza.dir/rule
-.PHONY : pizza
+pizza_src: src/CMakeFiles/pizza_src.dir/rule
+.PHONY : pizza_src
 
 # clean rule for target.
-CMakeFiles/pizza.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pizza.dir/build.make CMakeFiles/pizza.dir/clean
-.PHONY : CMakeFiles/pizza.dir/clean
+src/CMakeFiles/pizza_src.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/clean
+.PHONY : src/CMakeFiles/pizza_src.dir/clean
+
+#=============================================================================
+# Target rules for target main/CMakeFiles/pizza_main.dir
+
+# All Build rule for target.
+main/CMakeFiles/pizza_main.dir/all:
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/depend
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=1,2 "Built target pizza_main"
+.PHONY : main/CMakeFiles/pizza_main.dir/all
+
+# Build rule for subdir invocation for target.
+main/CMakeFiles/pizza_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/pizza_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 0
+.PHONY : main/CMakeFiles/pizza_main.dir/rule
+
+# Convenience name for target.
+pizza_main: main/CMakeFiles/pizza_main.dir/rule
+.PHONY : pizza_main
+
+# clean rule for target.
+main/CMakeFiles/pizza_main.dir/clean:
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/clean
+.PHONY : main/CMakeFiles/pizza_main.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles /home/ale/PAOO/T1/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles /home/ale/PAOO/T1/build/headers//CMakeFiles/progress.marks
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 headers/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 headers/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,44 +103,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 headers/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 headers/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named pizza_src
-
-# Build rule for target.
-pizza_src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pizza_src
-.PHONY : pizza_src
-
-# fast build rule for target.
-pizza_src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/build
-.PHONY : pizza_src/fast
-
-#=============================================================================
-# Target rules for targets named pizza_main
-
-# Build rule for target.
-pizza_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pizza_main
-.PHONY : pizza_main
-
-# fast build rule for target.
-pizza_main/fast:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/build
-.PHONY : pizza_main/fast
 
 # Help Target
 help:
@@ -150,8 +124,6 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pizza_main"
-	@echo "... pizza_src"
 .PHONY : help
 
 
@@ -163,6 +135,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

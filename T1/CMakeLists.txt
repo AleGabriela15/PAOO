@@ -14,10 +14,11 @@ else()
     endif()    
 endif()  
 
-#Define the executable
-add_executable(pizza 
-                src/main.cpp
-                src/pizza.cpp 
-                src/pizza.hpp
-                src/blat.hpp
-            )
+add_subdirectory(src)
+add_subdirectory(main)
+add_subdirectory(headers)
+
+
+
+
+
