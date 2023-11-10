@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.0)
 
-# Define the library target
-add_library(pizza_main
-                main.cpp
+# Adaugă sursa executabilului
+add_executable(pizza_main main.cpp)
+
+# Link the executable with the pizza_src library
+target_link_libraries(pizza_main
+    PRIVATE
+        pizza_src
 )
 
 # Include the source directory for header files

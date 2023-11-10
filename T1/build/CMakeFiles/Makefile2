@@ -155,7 +155,7 @@ src/CMakeFiles/pizza_src.dir/clean:
 # Target rules for target main/CMakeFiles/pizza_main.dir
 
 # All Build rule for target.
-main/CMakeFiles/pizza_main.dir/all:
+main/CMakeFiles/pizza_main.dir/all: src/CMakeFiles/pizza_src.dir/all
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=1,2 "Built target pizza_main"
@@ -163,7 +163,7 @@ main/CMakeFiles/pizza_main.dir/all:
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/pizza_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/pizza_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 0
 .PHONY : main/CMakeFiles/pizza_main.dir/rule
