@@ -154,6 +154,30 @@ pizza.cpp.s:
 	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/pizza.cpp.s
 .PHONY : pizza.cpp.s
 
+suc.o: suc.cpp.o
+.PHONY : suc.o
+
+# target to build an object file
+suc.cpp.o:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/suc.cpp.o
+.PHONY : suc.cpp.o
+
+suc.i: suc.cpp.i
+.PHONY : suc.i
+
+# target to preprocess a source file
+suc.cpp.i:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/suc.cpp.i
+.PHONY : suc.cpp.i
+
+suc.s: suc.cpp.s
+.PHONY : suc.s
+
+# target to generate assembly for a file
+suc.cpp.s:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/suc.cpp.s
+.PHONY : suc.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -166,6 +190,9 @@ help:
 	@echo "... pizza.o"
 	@echo "... pizza.i"
 	@echo "... pizza.s"
+	@echo "... suc.o"
+	@echo "... suc.i"
+	@echo "... suc.s"
 .PHONY : help
 
 

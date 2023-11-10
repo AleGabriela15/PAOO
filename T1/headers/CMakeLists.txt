@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.0)
 set(HEADERS
     blat.hpp
     pizza.hpp
+    suc.hpp
 )
 
 # Specify the header-only library

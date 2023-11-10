@@ -1,10 +1,14 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <memory>
 
 #include "../headers/pizza.hpp"
+#include "../headers/suc.hpp"
 
 using namespace std;
 using namespace pizza;
+
 
 int main()
 {
@@ -20,12 +24,18 @@ int main()
     concarne = prosciuto; // Assigment
     Pizza* movePizza = std::move(concarne); // Move Constructor
 
+    vector<suc::Suc<int>> vectorSucuri;
+    suc::Suc<double> mere("Mere", 1.5);
+
+    pizzaName = "Quattro Formaggi";
+    unique_ptr<Pizza> uniquePtr_Pizza = make_unique<Pizza>(7, pizzaName);
     cout<<"\n\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n";
 
     do{
         cout<<"\n Pentru tema 1, option = 1";
         cout<<"\n Pentru tema 2, option = 2";
-         cout<<"\n Pentru tema 3, option = 3";
+        cout<<"\n Pentru tema 3, partea cu template, option = 3";
+        cout<<"\n Pentru tema 3, partea cu pointers, option = 4";
         cout<<"\n Pentru finalizare, option = 0";
         cout<<"\n Introdu optiune = ";
         cin>>option;
@@ -56,6 +66,20 @@ int main()
             break;
 
         case 3:
+            vectorSucuri.push_back(suc::Suc<int>("Portocale", 2));
+            vectorSucuri.push_back(suc::Suc<int>("Mere", 1));
+            vectorSucuri.push_back(suc::Suc<int>("Grepfrut", 1));
+
+            for (const auto& suc : vectorSucuri) {
+                suc.afiseazaSuc();
+            }
+
+            mere.afiseazaSuc();
+
+            break;
+        
+        case 4:
+            cout<<"\nPizza alocata cu unique pointer este: "<< uniquePtr_Pizza->getNume()<<" si are: "<< uniquePtr_Pizza->getNrFelii()<<" felii.";
             break;
         
         default:
