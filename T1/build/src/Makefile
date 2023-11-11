@@ -130,6 +130,54 @@ pizza_src/fast:
 	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/build
 .PHONY : pizza_src/fast
 
+adresa.o: adresa.cpp.o
+.PHONY : adresa.o
+
+# target to build an object file
+adresa.cpp.o:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/adresa.cpp.o
+.PHONY : adresa.cpp.o
+
+adresa.i: adresa.cpp.i
+.PHONY : adresa.i
+
+# target to preprocess a source file
+adresa.cpp.i:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/adresa.cpp.i
+.PHONY : adresa.cpp.i
+
+adresa.s: adresa.cpp.s
+.PHONY : adresa.s
+
+# target to generate assembly for a file
+adresa.cpp.s:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/adresa.cpp.s
+.PHONY : adresa.cpp.s
+
+persoana.o: persoana.cpp.o
+.PHONY : persoana.o
+
+# target to build an object file
+persoana.cpp.o:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/persoana.cpp.o
+.PHONY : persoana.cpp.o
+
+persoana.i: persoana.cpp.i
+.PHONY : persoana.i
+
+# target to preprocess a source file
+persoana.cpp.i:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/persoana.cpp.i
+.PHONY : persoana.cpp.i
+
+persoana.s: persoana.cpp.s
+.PHONY : persoana.s
+
+# target to generate assembly for a file
+persoana.cpp.s:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/persoana.cpp.s
+.PHONY : persoana.cpp.s
+
 pizza.o: pizza.cpp.o
 .PHONY : pizza.o
 
@@ -187,6 +235,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... pizza_src"
+	@echo "... adresa.o"
+	@echo "... adresa.i"
+	@echo "... adresa.s"
+	@echo "... persoana.o"
+	@echo "... persoana.i"
+	@echo "... persoana.s"
 	@echo "... pizza.o"
 	@echo "... pizza.i"
 	@echo "... pizza.s"

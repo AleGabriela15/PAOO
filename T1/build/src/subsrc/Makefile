@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles /home/ale/PAOO/T1/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles /home/ale/PAOO/T1/build/src/subsrc//CMakeFiles/progress.marks
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subsrc/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ale/PAOO/T1/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subsrc/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,57 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subsrc/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subsrc/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named pizza_src
+# Convenience name for target.
+src/subsrc/CMakeFiles/pizza_subsrc.dir/rule:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/subsrc/CMakeFiles/pizza_subsrc.dir/rule
+.PHONY : src/subsrc/CMakeFiles/pizza_subsrc.dir/rule
 
-# Build rule for target.
-pizza_src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pizza_src
-.PHONY : pizza_src
-
-# fast build rule for target.
-pizza_src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/pizza_src.dir/build.make src/CMakeFiles/pizza_src.dir/build
-.PHONY : pizza_src/fast
-
-#=============================================================================
-# Target rules for targets named pizza_subsrc
-
-# Build rule for target.
-pizza_subsrc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pizza_subsrc
+# Convenience name for target.
+pizza_subsrc: src/subsrc/CMakeFiles/pizza_subsrc.dir/rule
 .PHONY : pizza_subsrc
 
 # fast build rule for target.
 pizza_subsrc/fast:
-	$(MAKE) $(MAKESILENT) -f src/subsrc/CMakeFiles/pizza_subsrc.dir/build.make src/subsrc/CMakeFiles/pizza_subsrc.dir/build
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/subsrc/CMakeFiles/pizza_subsrc.dir/build.make src/subsrc/CMakeFiles/pizza_subsrc.dir/build
 .PHONY : pizza_subsrc/fast
 
-#=============================================================================
-# Target rules for targets named pizza_main
+exemplu.o: exemplu.cpp.o
+.PHONY : exemplu.o
 
-# Build rule for target.
-pizza_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pizza_main
-.PHONY : pizza_main
+# target to build an object file
+exemplu.cpp.o:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/subsrc/CMakeFiles/pizza_subsrc.dir/build.make src/subsrc/CMakeFiles/pizza_subsrc.dir/exemplu.cpp.o
+.PHONY : exemplu.cpp.o
 
-# fast build rule for target.
-pizza_main/fast:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/pizza_main.dir/build.make main/CMakeFiles/pizza_main.dir/build
-.PHONY : pizza_main/fast
+exemplu.i: exemplu.cpp.i
+.PHONY : exemplu.i
+
+# target to preprocess a source file
+exemplu.cpp.i:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/subsrc/CMakeFiles/pizza_subsrc.dir/build.make src/subsrc/CMakeFiles/pizza_subsrc.dir/exemplu.cpp.i
+.PHONY : exemplu.cpp.i
+
+exemplu.s: exemplu.cpp.s
+.PHONY : exemplu.s
+
+# target to generate assembly for a file
+exemplu.cpp.s:
+	cd /home/ale/PAOO/T1/build && $(MAKE) $(MAKESILENT) -f src/subsrc/CMakeFiles/pizza_subsrc.dir/build.make src/subsrc/CMakeFiles/pizza_subsrc.dir/exemplu.cpp.s
+.PHONY : exemplu.cpp.s
 
 # Help Target
 help:
@@ -163,9 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... pizza_main"
-	@echo "... pizza_src"
 	@echo "... pizza_subsrc"
+	@echo "... exemplu.o"
+	@echo "... exemplu.i"
+	@echo "... exemplu.s"
 .PHONY : help
 
 
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ale/PAOO/T1/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

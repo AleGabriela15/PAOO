@@ -5,6 +5,8 @@ set(HEADERS
     blat.hpp
     pizza.hpp
     suc.hpp
+    adresa.hpp
+    persoana.hpp
 )
 
 # Specify the header-only library

@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libpizza_main.a"
+  "libpizza_subsrc.a"
 )

@@ -4,7 +4,11 @@ cmake_minimum_required(VERSION 3.0)
 add_library(pizza_src 
                 pizza.cpp
                 suc.cpp
+                persoana.cpp
+                adresa.cpp
 )
+
+add_subdirectory(subsrc)
 
 # Include the source directory for header files
 target_include_directories(pizza_src

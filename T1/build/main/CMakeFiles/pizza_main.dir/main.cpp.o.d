@@ -167,4 +167,7 @@ main/CMakeFiles/pizza_main.dir/main.cpp.o: \
  /usr/include/c++/11/backward/auto_ptr.h \
  /home/ale/PAOO/T1/main/../headers/pizza.hpp \
  /home/ale/PAOO/T1/main/../headers/blat.hpp \
- /home/ale/PAOO/T1/main/../headers/suc.hpp
+ /home/ale/PAOO/T1/main/../headers/suc.hpp \
+ /home/ale/PAOO/T1/main/../headers/adresa.hpp \
+ /home/ale/PAOO/T1/main/../headers/persoana.hpp \
+ /home/ale/PAOO/T1/main/../headers/adresa.hpp

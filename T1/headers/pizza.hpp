@@ -10,7 +10,7 @@ namespace pizza{
     class Pizza : public Blat{
         private:
             int nr_felii;
-            char* nume;   
+            char* nume;
             
         public:
             Pizza(int nr_felii, const char* nume);

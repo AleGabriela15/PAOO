@@ -1,2 +1,2 @@
-/usr/bin/ar qc libpizza_src.a CMakeFiles/pizza_src.dir/pizza.cpp.o CMakeFiles/pizza_src.dir/suc.cpp.o
+/usr/bin/ar qc libpizza_src.a CMakeFiles/pizza_src.dir/pizza.cpp.o CMakeFiles/pizza_src.dir/suc.cpp.o CMakeFiles/pizza_src.dir/persoana.cpp.o CMakeFiles/pizza_src.dir/adresa.cpp.o
 /usr/bin/ranlib libpizza_src.a

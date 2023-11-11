@@ -97,19 +97,51 @@ src/CMakeFiles/pizza_src.dir/suc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pizza_src.dir/suc.cpp.s"
 	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ale/PAOO/T1/src/suc.cpp -o CMakeFiles/pizza_src.dir/suc.cpp.s
 
+src/CMakeFiles/pizza_src.dir/persoana.cpp.o: src/CMakeFiles/pizza_src.dir/flags.make
+src/CMakeFiles/pizza_src.dir/persoana.cpp.o: ../src/persoana.cpp
+src/CMakeFiles/pizza_src.dir/persoana.cpp.o: src/CMakeFiles/pizza_src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/pizza_src.dir/persoana.cpp.o"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pizza_src.dir/persoana.cpp.o -MF CMakeFiles/pizza_src.dir/persoana.cpp.o.d -o CMakeFiles/pizza_src.dir/persoana.cpp.o -c /home/ale/PAOO/T1/src/persoana.cpp
+
+src/CMakeFiles/pizza_src.dir/persoana.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pizza_src.dir/persoana.cpp.i"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ale/PAOO/T1/src/persoana.cpp > CMakeFiles/pizza_src.dir/persoana.cpp.i
+
+src/CMakeFiles/pizza_src.dir/persoana.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pizza_src.dir/persoana.cpp.s"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ale/PAOO/T1/src/persoana.cpp -o CMakeFiles/pizza_src.dir/persoana.cpp.s
+
+src/CMakeFiles/pizza_src.dir/adresa.cpp.o: src/CMakeFiles/pizza_src.dir/flags.make
+src/CMakeFiles/pizza_src.dir/adresa.cpp.o: ../src/adresa.cpp
+src/CMakeFiles/pizza_src.dir/adresa.cpp.o: src/CMakeFiles/pizza_src.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/pizza_src.dir/adresa.cpp.o"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/pizza_src.dir/adresa.cpp.o -MF CMakeFiles/pizza_src.dir/adresa.cpp.o.d -o CMakeFiles/pizza_src.dir/adresa.cpp.o -c /home/ale/PAOO/T1/src/adresa.cpp
+
+src/CMakeFiles/pizza_src.dir/adresa.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pizza_src.dir/adresa.cpp.i"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ale/PAOO/T1/src/adresa.cpp > CMakeFiles/pizza_src.dir/adresa.cpp.i
+
+src/CMakeFiles/pizza_src.dir/adresa.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pizza_src.dir/adresa.cpp.s"
+	cd /home/ale/PAOO/T1/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ale/PAOO/T1/src/adresa.cpp -o CMakeFiles/pizza_src.dir/adresa.cpp.s
+
 # Object files for target pizza_src
 pizza_src_OBJECTS = \
 "CMakeFiles/pizza_src.dir/pizza.cpp.o" \
-"CMakeFiles/pizza_src.dir/suc.cpp.o"
+"CMakeFiles/pizza_src.dir/suc.cpp.o" \
+"CMakeFiles/pizza_src.dir/persoana.cpp.o" \
+"CMakeFiles/pizza_src.dir/adresa.cpp.o"
 
 # External object files for target pizza_src
 pizza_src_EXTERNAL_OBJECTS =
 
 src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/pizza.cpp.o
 src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/suc.cpp.o
+src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/persoana.cpp.o
+src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/adresa.cpp.o
 src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/build.make
 src/libpizza_src.a: src/CMakeFiles/pizza_src.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libpizza_src.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ale/PAOO/T1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libpizza_src.a"
 	cd /home/ale/PAOO/T1/build/src && $(CMAKE_COMMAND) -P CMakeFiles/pizza_src.dir/cmake_clean_target.cmake
 	cd /home/ale/PAOO/T1/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/pizza_src.dir/link.txt --verbose=$(VERBOSE)
 

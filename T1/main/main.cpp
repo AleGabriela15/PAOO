@@ -1,13 +1,16 @@
 #include <iostream>
-#include <string>
 #include <vector>
 #include <memory>
 
 #include "../headers/pizza.hpp"
 #include "../headers/suc.hpp"
+#include "../headers/adresa.hpp"
+#include "../headers/persoana.hpp"
 
 using namespace std;
 using namespace pizza;
+using namespace adresa;
+using namespace persoana;
 
 
 int main()
@@ -29,6 +32,10 @@ int main()
 
     pizzaName = "Quattro Formaggi";
     unique_ptr<Pizza> uniquePtr_Pizza = make_unique<Pizza>(7, pizzaName);
+
+    auto commonAddress = make_shared<Adresa_livrare>("str Wien",5);
+    Persoana* persoana1 = new Persoana("Maria", commonAddress);
+    Persoana* persoana2 = new Persoana("Lucas", commonAddress);
     cout<<"\n\n ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n\n";
 
     do{
@@ -79,7 +86,10 @@ int main()
             break;
         
         case 4:
-            cout<<"\nPizza alocata cu unique pointer este: "<< uniquePtr_Pizza->getNume()<<" si are: "<< uniquePtr_Pizza->getNrFelii()<<" felii.";
+            cout<<"\nPizza alocata cu unique pointer este: "<< uniquePtr_Pizza->getNume()<<" si are: "<< uniquePtr_Pizza->getNrFelii()<<" felii."<<endl;
+            
+            persoana1->afiseazaPersoana();
+            persoana2->afiseazaPersoana();
             break;
         
         default:
